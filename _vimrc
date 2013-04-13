@@ -1,3 +1,5 @@
+set nocompatible
+
 " Recognise format, use sensible indentation
 filetype plugin on
 filetype indent on
@@ -41,7 +43,7 @@ map j gj
 map k gk
 
 " Window switching
-map <C-j> <C-w><C-j>
+" map <C-j> <C-w><C-j> " conflicts with latex suite jump
 map <C-k> <C-w><C-k>
 
 " wildmenu (completion menu)
@@ -59,6 +61,8 @@ noremap <space> za
 " save and compile, latex
 map <Leader>w :w <Enter> \ll
 
+" edit this file
+map <Leader>tv :tabnew $MYVIMRC <Enter>
 " reload this file
 map <Leader>s :so $MYVIMRC <Enter>
 
@@ -66,16 +70,13 @@ map <Leader>s :so $MYVIMRC <Enter>
 map <Leader>ww :set lines=20 columns=300 <Enter>
 map <Leader>wh :set lines=200 columns=80 <Enter>
 
-" Stuff for sumatra forward/reverse search " Is in ftplugin/tex.vim
-" let g:Tex_CompileRule_pdf='pdflatex --synctex=-1 -src-specials -interaction=nonstopmode $*'
-" let g:Tex_ViewRule_pdf = 'SumatraPDF -inverse-search "gvim -c \":RemoteOpen +\%] \%f\""'
-
 " some abbreviations
 abbreviate iso isomorphism
 abbreviate isos isomorphisms
 abbreviate isic isomorphic
 abbreviate TFAE the following are equivalent
 abbreviate wrt with respect to
+abbreviate MHOME D:/Users/Martin/Documents/skole/Maths/
 
 " sources:
 " stackoverflow, what is in your .vimrc?
