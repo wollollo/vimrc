@@ -23,10 +23,10 @@ set showmatch
 " show cursor location
 set ruler
 
-" Tab options
-set expandtab
-set shiftwidth=2
-set tabstop=2
+" Tab options " these should be set format-wise, in $HOME/vimfiles/ftplugin
+set expandtab " this is needed for all formats
+" set shiftwidth=2
+" set tabstop=2
 
 " Backspace anywhere
 set backspace=eol,indent,start
@@ -37,6 +37,9 @@ set si
 
 " Wrap lines
 set wrap
+
+" Turn the toolbar off
+set guioptions-=T
 
 " Make jk move on visual lines (wrapped)
 map j gj
@@ -49,7 +52,7 @@ map <C-k> <C-w><C-k>
 " wildmenu (completion menu)
 set wildmenu
 " wildmenu ignores logs etc
-set wildignore=*.aux,*.log,*.idx,*.pdf
+set wildignore=*.aux,*.log,*.idx,*.pdf,*.dvi,*.pdfsync,*.synctex
 
 " create blank newlines but stay in normal mode
 nnoremap <silent> zj o<Esc>
@@ -69,6 +72,9 @@ map <Leader>s :so $MYVIMRC <Enter>
 " some window sizes
 map <Leader>ww :set lines=20 columns=300 <Enter>
 map <Leader>wh :set lines=200 columns=80 <Enter>
+set lines=200
+set columns=80
+set scrolloff=5
 
 " some abbreviations
 abbreviate iso isomorphism
