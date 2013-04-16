@@ -52,7 +52,7 @@ map <C-k> <C-w><C-k>
 " wildmenu (completion menu)
 set wildmenu
 " wildmenu ignores logs etc
-set wildignore=*.aux,*.log,*.idx,*.pdf,*.dvi,*.pdfsync,*.synctex
+set wildignore=*.aux,*.log,*.idx,*.pdf,*.dvi,*.pdfsync,*.synctex,*.out,*.toc
 
 " create blank newlines but stay in normal mode
 nnoremap <silent> zj o<Esc>
